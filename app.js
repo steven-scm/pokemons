@@ -13,7 +13,14 @@ function render() {
     let cont = document.getElementById("pokemon");
     cont.innerHTML = `<img src="https://tinyurl.com/ironhack-pokemons/${counter}.svg">`
     cont.firstChild.className = "poke poka poki";
-    cont.classList.add("mystyle", "toto", "popo");
+    cont.classList.add("mystyle", "toto", "popo"); // this is useless just for test
+    if (counter === 1) {
+        document.getElementById("pokemon").style.backgroundColor = "blue";
+    } else if (1 < counter && counter < 649) {
+        document.getElementById("pokemon").style.backgroundColor = "white";
+    } else {
+        document.getElementById("pokemon").style.backgroundColor = "red";
+    }
 }
 render();
 
@@ -34,3 +41,5 @@ next.addEventListener("click", function () {
         render();
     }
 })
+
+
